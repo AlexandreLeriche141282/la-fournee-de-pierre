@@ -1,0 +1,32 @@
+@import '../../style/main.scss';
+
+.newSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Séparer le texte et l'image */
+    padding: 20px;
+    // background-color: #f4f4f4; /* Couleur de fond différente pour la nouvelle section */
+    text-align: left; /* Alignement du texte à gauche */
+    max-width: 1100px;
+    margin: 0 auto;
+    
+    .textContainer {
+        flex: 1;
+        margin-right: 20px; /* Espacement entre le texte et l'image */
+    }
+
+    h2 {
+        margin-top: 0;
+        color: $color2;
+    }
+
+    p {
+        margin: 20px 0;
+    }
+
+    .image {
+        max-width: 50%; /* Ajuster la taille de l'image */
+        max-height: 400px;
+        border-radius: 90px 90px 190px 0;
+    }
+}

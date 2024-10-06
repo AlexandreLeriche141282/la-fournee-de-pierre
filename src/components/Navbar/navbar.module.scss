@@ -1,0 +1,98 @@
+@import '../../style/main.scss';
+nav {
+  background-color: #ffffff;
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 20% 60% 20%;
+  align-items: center;
+  padding: 10px 30px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+
+  img {
+    width: 200px;
+  }
+
+  .burgerButton {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menuList {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    list-style: none;
+
+    li {
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 13px;
+        padding: 10px 15px;
+        transition: color 0.3s ease;
+        letter-spacing: 1px;
+
+        &:hover {
+          color: $color2;
+        }
+
+        &.active {
+          color: $color1; /* Vert pour l'onglet actif */
+        }
+      }
+    }
+  }
+
+  .callButton {
+    display: inline-block;
+    line-height: 25px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: $color1;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $color2;
+    }
+  }
+
+  /* Media query pour les écrans inférieurs à 1000px */
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+
+    .menuList {
+      display: none; /* Cacher le menu classique par défaut */
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      li {
+        text-align: center;
+      }
+    }
+
+    .menuList.open {
+      display: flex; /* Afficher le menu burger lorsqu'il est ouvert */
+    }
+
+    .burgerButton {
+      display: block; /* Afficher le bouton du menu burger */
+    }
+
+    .callButton {
+      justify-self: center;
+    }
+  }
+}

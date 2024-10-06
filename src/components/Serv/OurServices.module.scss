@@ -1,0 +1,132 @@
+@import '../../style/main.scss';
+
+.ourServices {
+    
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('../../picture/fond.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    .titleContainer {
+        position: relative;
+        margin-bottom: 40px; // Ajustez selon vos besoins
+
+        h2 {
+            color: $color1;
+            font-size: clamp(35px, 5vw, 75px);
+            padding: 20px 0;
+            font-weight: 200;
+            margin-bottom: 0; // Supprime la marge en bas du h2
+            span{
+                color: $color2;
+            }
+        }
+
+        .subtitle {
+            position: absolute;
+            bottom: 10px; // Ajustez cette valeur pour positionner le h3
+            left: 50%;
+            font-weight: 200;
+            letter-spacing: 2px;
+            transform: translateX(-50%);
+            padding: 5px 15px;
+            font-size: clamp(28px, 4vw, 38px);// Ajustez selon vos préférences
+            color: black; // Utilisez la couleur de votre choix
+            z-index: 1; // Assurez-vous que le sous-titre est au-dessus des autres éléments
+        }
+    }
+    .servicesGrid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .serviceCard {
+        position: relative;
+        width: calc(33.333% - 20px); /* Trois colonnes avec un espace de 20px entre chaque */
+        overflow: hidden;
+        transition: flex 0.7s ease;
+        border-radius: 10px;
+        height: 400px; /* Hauteur fixe pour éviter la déformation */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1; /* Les cartes se réduisent également */
+        transition: flex 0.7s ease;
+        margin: 10px;
+        /* Agrandir la carte survolée */
+        &:hover {
+            flex: 4; /* L'image survolée prend plus de place */
+            z-index: 1; /* S'assure que la carte est au-dessus des autres */
+        }
+
+        /* Réduire la taille des cartes non survolées */
+        &:not(:hover) {
+            flex: 1; /* Réduction des cartes non survolées */
+        }
+
+        img {
+            height: auto; /* Hauteur auto pour maintenir le ratio de l'image */
+            object-fit: cover; /* L'image couvre la div sans distorsion */
+            // transition: none; /* Pas de transition de zoom */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            opacity: 0;
+            transform: translateY(20px); /* Commence légèrement en bas */
+            transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+        }
+
+        &:hover .overlay {
+            opacity: 1;
+            transform: translateY(0); /* Le texte remonte à sa position d'origine */
+        }
+
+        .text {
+            text-align: center;
+            padding: 20px;
+
+            h3 {
+                font-size: 40px;
+                font-weight: bold;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin-bottom: 10px;
+                opacity: 0;
+                transform: translateY(20px); /* Légèrement en haut */
+                transition: opacity 0.9s ease 0.3s, transform 0.9s ease 0.3s; /* Animation pour h3 */
+            }
+
+            p {
+                opacity: 0;
+                transform: translateY(20px); /* Légèrement en bas */
+                transition: opacity 0.9s ease 0.6s, transform 0.9s ease 0.6s; /* Animation retardée pour p */
+            }
+        }
+
+        &:hover .text h3 {
+            opacity: 1;
+            transform: translateY(0); /* Le titre h3 remonte à sa position d'origine */
+        }
+
+        &:hover .text p {
+            opacity: 1;
+            transform: translateY(0); /* Le paragraphe p remonte à sa position d'origine */
+        }
+    }
+}

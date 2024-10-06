@@ -1,0 +1,87 @@
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #ecf0f1;
+$link-hover-color: #3498db;
+$spacing-unit: 20px;
+$border-color: #34495e;
+$font-size-small: 12px;
+$font-size-default: 14px;
+$font-size-heading: 18px;
+
+// Mixin pour Flexbox
+@mixin flex-center {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+// Styles
+.footer {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing-unit 0;
+  text-align: center;
+
+  .footer-container {
+    @include flex-center;
+  }
+
+  .footer-section {
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+
+    h4 {
+      margin-bottom: 15px;
+      font-size: $font-size-heading;
+    }
+
+    p,
+    a {
+      font-size: $font-size-default;
+      color: $secondary-color;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: $secondary-color;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    margin-top: 15px;
+
+    a {
+      margin: 0 10px;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .footer-bottom {
+    margin-top: $spacing-unit;
+    border-top: 1px solid $border-color;
+    padding-top: 10px;
+    font-size: $font-size-small;
+
+    p {
+      margin: 0;
+    }
+  }
+}
