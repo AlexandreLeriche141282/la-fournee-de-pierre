@@ -1,87 +1,119 @@
-// Variables
-$primary-color: #2c3e50;
-$secondary-color: #ecf0f1;
-$link-hover-color: #3498db;
-$spacing-unit: 20px;
-$border-color: #34495e;
-$font-size-small: 12px;
-$font-size-default: 14px;
-$font-size-heading: 18px;
+@import '../../style/main.scss';
 
-// Mixin pour Flexbox
-@mixin flex-center {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+footer.section2 {
+  
+ 
 
-// Styles
-.footer {
-  background-color: $primary-color;
-  color: white;
-  padding: $spacing-unit 0;
-  text-align: center;
-
-  .footer-container {
-    @include flex-center;
+  li {
+    list-style: none;
   }
 
-  .footer-section {
-    margin: 10px;
-    flex: 1;
-    min-width: 250px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: 80px auto;
+  width: 90%;
 
-    h4 {
-      margin-bottom: 15px;
-      font-size: $font-size-heading;
+  .part1 {
+    height: 600px;
+    @media (max-width: 710px) {
+      height: 500px;
     }
 
-    p,
-    a {
-      font-size: $font-size-default;
-      color: $secondary-color;
-      text-decoration: none;
+    img {
+      width: 95%;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .logo-part {
+      display: flex;
+      justify-content: space-around;
+      img {
+        width: 70px;
+      }
+    }
+
+    .adress {
+      text-align: left;
+      margin-bottom: 20px;
+      h3 {
+        text-transform: uppercase;
+        padding: 10px 0;
+        font-weight: 700;
+        letter-spacing: 3px;
+      }
+      p {
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .part2 {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+
+    .horaires {
+      width: 70%;
+      top: 0;
+
+      .list-footer-right {
+        li {
+          text-align: left;
+        }
+      }
+
+      .upper {
+        text-transform: uppercase;
+        color: $color2;
+        font-weight: 700;
+        background: rgba(220, 220, 220, 0.3);
+      }
+
+      .li-red {
+        color: rgba(255, 0, 0, 0.715);
+        font-weight: 800;
+        margin-bottom: 40px;
+      }
 
       li {
-        margin-bottom: 10px;
-
-        a {
-          color: $secondary-color;
-          text-decoration: none;
-          transition: color 0.3s;
-
-          &:hover {
-            color: $link-hover-color;
-          }
+        line-height: 25px;
+        &:nth-child(2n) {
+          margin-bottom: 50px;
         }
       }
     }
   }
 
-  .social-icons {
-    margin-top: 15px;
+  .part3 {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
 
-    a {
-      margin: 0 10px;
-      display: inline-block;
-      width: 24px;
-      height: 24px;
+    @media (max-width: 710px) {
+      height: 470px;
     }
-  }
 
-  .footer-bottom {
-    margin-top: $spacing-unit;
-    border-top: 1px solid $border-color;
-    padding-top: 10px;
-    font-size: $font-size-small;
+    
+
+    .lieu-distributeur-baguettes {
+      li {
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: rgb(166, 114, 69);
+      }
+    }
 
     p {
-      margin: 0;
+      font-weight: 700;
+      padding-bottom: 30px;
+    }
+  }
+  @media (max-width: 710px) {
+    display: flex;
+    flex-direction: column;
+    p, h3 {
+      text-align: center;
     }
   }
 }

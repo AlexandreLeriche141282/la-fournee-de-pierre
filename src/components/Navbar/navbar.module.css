@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+@font-face {
+  font-family: "dragon";
+  src: url("../../fonts/dragonwick-fg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+nav {
+  justify-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 30px;
+  margin: 10px auto;
+  max-width: 1200px;
+  /* Media query pour les écrans inférieurs à 1000px */
+}
+nav .containerLogo {
+  max-width: 1200px;
+  margin: 10px auto;
+  text-align: center;
+  color: #696969;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+nav .containerLogo::before, nav .containerLogo::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-top: 1px solid #a39797; /* Couleur et style du trait */
+  margin: 0 10px; /* Espacement autour des traits */
+}
+nav .containerLogo h2 {
+  font-size: 30px;
+  padding: 10px 5px;
+  font-family: "dragon", sans-serif;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+nav .containerLogo h2 span {
+  font-family: "dragon", sans-serif;
+  color: rgb(255, 243, 0);
+}
+@media (max-width: 400px) {
+  nav .containerLogo h2 {
+    letter-spacing: normal;
+  }
+}
+nav .containerLogo img {
+  width: 130px;
+}
+nav .burgerButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+nav .menuList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 30px;
+  list-style: none;
+}
+nav .menuList li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  padding: 10px 15px;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+nav .menuList li a:hover {
+  color: #FFC107;
+}
+nav .menuList li a.active {
+  color: #FFC107; /* Vert pour l'onglet actif */
+}
+@media (max-width: 1000px) {
+  nav {
+    grid-template-columns: 1fr;
+  }
+  nav .menuList {
+    display: none; /* Cacher le menu classique par défaut */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  nav .menuList li {
+    text-align: center;
+  }
+  nav .menuList.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Afficher le menu burger lorsqu'il est ouvert */
+  }
+  nav .burgerButton {
+    display: block; /* Afficher le bouton du menu burger */
+  }
+  nav .callButton {
+    justify-self: center;
+  }
+}/*# sourceMappingURL=navbar.module.css.map */

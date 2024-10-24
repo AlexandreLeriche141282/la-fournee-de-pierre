@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './navbar.module.scss';
-import facade from '../../picture/logo_texte.png';
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +13,15 @@ const Navbar = () => {
 
     return (
         <nav className={styles.nav}>
-            <img src={facade} alt="Logo" />
 
             <button className={styles.burgerButton} onClick={toggleMenu}>
                 ☰ {/* Icône du menu burger */}
             </button>
+            <div className={styles.containerLogo}>
+                <h2>La <span>F</span>ournée de <span>P</span>ierre</h2>
+            </div>
+            
+            <div className="containerNav">
 
             <ul className={`${styles.menuList} ${isOpen ? styles.open : ''}`}>
                 <li>
@@ -26,28 +30,28 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/pharm" className={location.pathname === '/pharm' ? styles.active : ''}>
-                        Pharmacie
+                    <Link to="/saintJean" className={location.pathname === '/saintJean' ? styles.active : ''}>
+                        Saint Jean de Linières
                     </Link>
                 </li>
                 <li>
                     <Link to="/para" className={location.pathname === '/para' ? styles.active : ''}>
-                        Parapharmacie
+                        Saint Lambert la Potherie
                     </Link>
                 </li>
                 <li>
                     <Link to="/ortho" className={location.pathname === '/ortho' ? styles.active : ''}>
-                        Orthopédie
+                        Snacking
                     </Link>
                 </li>
                 <li>
                     <Link to="/materials" className={location.pathname === '/materials' ? styles.active : ''}>
-                        Matériel médical
+                        Pâtisseries
                     </Link>
                 </li>
                 <li>
                     <Link to="/actuality" className={location.pathname === '/actuality' ? styles.active : ''}>
-                        Actualités
+                        Chocolats
                     </Link>
                 </li>
                 <li>
@@ -56,8 +60,7 @@ const Navbar = () => {
                     </Link>
                 </li>
             </ul>
-
-            <a href="tel:0359289387" className={styles.callButton}>03 59 28 93 87</a>
+            </div>
         </nav>
     );
 };

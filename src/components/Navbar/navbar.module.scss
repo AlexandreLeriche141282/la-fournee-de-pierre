@@ -1,18 +1,55 @@
 @import '../../style/main.scss';
+@font-face {
+  font-family: 'dragon';
+  src: url('../../fonts/dragonwick-fg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 nav {
-  background-color: #ffffff;
-  display: grid;
   justify-items: start;
-  grid-template-columns: 20% 60% 20%;
   align-items: center;
   padding: 10px 30px;
-  margin: 0 auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-
-  img {
-    width: 200px;
+  margin: 10px auto;
+  max-width: 1200px;
+  .containerLogo {
+    max-width: 1200px;
+    margin: 10px auto;
+    text-align: center;
+    color: $color1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      border-top: 1px solid #a39797; /* Couleur et style du trait */
+      margin: 0 10px; /* Espacement autour des traits */
+    }
+  
+    h2 {
+      font-size: 30px;
+      padding: 10px 5px;
+      font-family: 'dragon', sans-serif;
+      font-weight: 100;
+      letter-spacing: 10px;
+      // white-space: nowrap; /* Empêche le texte de se wrapper */
+  
+      span {
+        font-family: 'dragon', sans-serif;
+        color: rgb(255, 243, 0);
+      }
+      @media (max-width:400px) {
+        letter-spacing: normal;
+      }
+    }
+  
+    img {
+      width: 130px;
+    }
   }
+  
 
   .burgerButton {
     display: none;
@@ -25,7 +62,7 @@ nav {
   .menuList {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 10px 30px;
     list-style: none;
 
     li {
@@ -36,37 +73,19 @@ nav {
         padding: 10px 15px;
         transition: color 0.3s ease;
         letter-spacing: 1px;
-
+        font-weight: 500;
         &:hover {
           color: $color2;
         }
 
         &.active {
-          color: $color1; /* Vert pour l'onglet actif */
+          color: $color2; /* Vert pour l'onglet actif */
         }
       }
     }
   }
 
-  .callButton {
-    display: inline-block;
-    line-height: 25px;
-    height: 50px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: $color1;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 35px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: $color2;
-    }
-  }
+  
 
   /* Media query pour les écrans inférieurs à 1000px */
   @media (max-width: 1000px) {

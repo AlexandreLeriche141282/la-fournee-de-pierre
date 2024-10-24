@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+footer.section2 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: 80px auto;
+  width: 90%;
+}
+footer.section2 li {
+  list-style: none;
+}
+footer.section2 .part1 {
+  height: 600px;
+}
+@media (max-width: 710px) {
+  footer.section2 .part1 {
+    height: 500px;
+  }
+}
+footer.section2 .part1 img {
+  width: 95%;
+}
+footer.section2 .part1 .logo-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+footer.section2 .part1 .logo-part img {
+  width: 70px;
+}
+footer.section2 .part1 .adress {
+  text-align: left;
+  margin-bottom: 20px;
+}
+footer.section2 .part1 .adress h3 {
+  text-transform: uppercase;
+  padding: 10px 0;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+footer.section2 .part1 .adress p {
+  letter-spacing: 2px;
+}
+footer.section2 .part2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 600px;
+}
+footer.section2 .part2 .horaires {
+  width: 70%;
+  top: 0;
+}
+footer.section2 .part2 .horaires .list-footer-right li {
+  text-align: left;
+}
+footer.section2 .part2 .horaires .upper {
+  text-transform: uppercase;
+  color: #FFC107;
+  font-weight: 700;
+  background: rgba(220, 220, 220, 0.3);
+}
+footer.section2 .part2 .horaires .li-red {
+  color: rgba(255, 0, 0, 0.715);
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+footer.section2 .part2 .horaires li {
+  line-height: 25px;
+}
+footer.section2 .part2 .horaires li:nth-child(2n) {
+  margin-bottom: 50px;
+}
+footer.section2 .part3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 600px;
+}
+@media (max-width: 710px) {
+  footer.section2 .part3 {
+    height: 470px;
+  }
+}
+footer.section2 .part3 .lieu-distributeur-baguettes li {
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: rgb(166, 114, 69);
+}
+footer.section2 .part3 p {
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+@media (max-width: 710px) {
+  footer.section2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer.section2 p, footer.section2 h3 {
+    text-align: center;
+  }
+}/*# sourceMappingURL=footer.module.css.map */

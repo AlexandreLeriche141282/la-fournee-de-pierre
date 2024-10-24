@@ -2,16 +2,33 @@
 
 .aboutContainer {
     position: relative;
-    background-image: url('../../picture/facade2.jpg'); /* Chemin vers ton image */
-    background-size: cover; /* L'image couvre toute la div */
-    background-position: center; /* Centrer l'image */
-    background-repeat: no-repeat; /* Pas de répétition */
-    height: 80vh; /* Prend toute la hauteur de la fenêtre */
-    display: flex; /* Utilisation de Flexbox */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    background-image: url('../../picture/painsFour.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    padding: 0 5vw;
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
     color: white;
+    overflow: hidden; // Ajouté pour masquer les débordements
+
+    // Animation de l'image de fond
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        animation: scaleAnimation 10s ease-in-out infinite alternate;
+        z-index: 0;
+    }
   
     &::before {
         content: '';
@@ -20,23 +37,24 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.237); /* Superposition noire semi-transparente */
-        z-index: 1; /* Place l'overlay au-dessus de l'image */
+        background-color: rgba(0, 0, 0, 0.237);
+        z-index: 1;
     }
   
     .content {
-        position: relative;
-        z-index: 2; /* Place le texte au-dessus de la superposition */
+        // position: relative;
+        z-index: 2;
         max-width: 550px;
         padding: 0 10px;
-        opacity: 0; /* Départ invisible */
-        transform: translateY(80px); /* Départ légèrement décalé vers le bas */
-        animation: fadeInUp 1s ease-out forwards; /* Animation d'apparition */
-      
+        opacity: 0;
+        transform: translateY(80px);
+        animation: fadeInUp 4s ease-out forwards;
+        background-color: rgba(174, 165, 165, 0.242);
         h1 {
             margin: 10px 0;
             color: $color2;
-            font-size: 35px;
+            font-size: clamp(35px, 5vw, 43px);
+            font-weight: 100;
             span {
                 color: $color1;
             }
@@ -47,6 +65,15 @@
             font-size: 18px;
             line-height: 1.5;
         }
+    }
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
     }
 }
 

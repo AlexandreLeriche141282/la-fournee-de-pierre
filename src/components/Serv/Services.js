@@ -1,58 +1,60 @@
 import React from 'react';
 import styles from './OurServices.module.scss';
-import interieurPharma from '../../picture/pharm2.jpg';
-import para from '../../picture/para2.jpg';
-import ortho from '../../picture/ortho.jpg';
-import materielsMedical from '../../picture/Materiel-medical.jpg';
-import produitsBebe from '../../picture/produits-bébé.jpg';
-import basContention from '../../picture/bas-de-contention.jpg';
+import boulangerieSaintLambert from '../../picture/boulangeries/boulangerie-saint-lambert.jpg';
+import boulangerieSaintJean from '../../picture/boulangeries/boulangerie-saint-jean-de-linières.jpg';
+import snacking from '../../picture/snacking/sandwich.jpg';
+import patisserie from '../../picture/patisserie/patisserie.jpg';
+import chocolaterie from '../../picture/chocolat/bonbon chocolat.jpg';
+import contact from '../../picture/bas-de-contention.jpg';
 
 const services = [
     {
-        title: 'Consultation Pharmaceutique',
-        description: 'Des conseils personnalisés pour vos besoins médicaux.',
-        image: interieurPharma,
+        title: 'Boulangerie de Saint Jean de Linières',
+        description: 'Découvrez la boulangerie',
+        image: boulangerieSaintJean,
+        link: 'saintJean',
     },
     {
-        title: 'Parapharmacie',
-        description: 'Prendre soin de vous avec des produits cosmétiques et des produits de beauté de marques reconnues.',
-        image: para,
+        title: 'Boulangerie de Saint Lambert la Potherie',
+        description: 'Découvrez la boulangerie',
+        image: boulangerieSaintLambert,
+        link: 'https://example.com/parapharmacie',
     },
-    
     {
-        title: 'Orthopédie',
-        description: "Retrouvez dans notre Pharmacie toutes nos solutions orthopédiques issues des plus grandes marques spécialisées.",
-        image: ortho,
+        title: 'Snacking',
+        description: "Un p'tit creux, c'est par ici ! ",
+        image: snacking,
+        link: 'https://example.com/orthopedie',
     },
-    
 ];
+
 const services2 = [
     {
-        title: 'Matériel médical',
-        description: 'La Pharmacie St-Firmin, située à Morbecque, met à votre disposition la location et la vente de matériels médicaux de toutes sortes, pour vos besoins au quotidien ou en cas de nécessité particulière pour le maintien à domicile.',
-        image: materielsMedical,
+        title: 'La pâtisserie',
+        description: 'Laissez-vous tenter ...',
+        image: patisserie,
+        link: 'https://example.com/materiel-medical',
     },
     {
-        title: 'Produits Bébé',
-        description: 'À La Pharmacie St-Firmin, notre rayon puériculture vous propose un large choix de produits de toilette, de matériel pour le soin et le bien-être des tout-petits et de laits maternisés.',
-        image: produitsBebe,
+        title: 'La chocolaterie',
+        description: 'Succombez à la tentation ! ',
+        image: chocolaterie,
+        link: 'https://example.com/produits-bebe',
     },
     {
-        title: 'Bas de contention',
+        title: 'Contact',
         description: 'Soulagez vos jambes lourdes et prévenez l`\'`apparition de varices avec des chaussettes, collants et bas de contention à La Pharmacie St-Firmin, située à Morbecque.',
-        image:basContention,
-        
+        image: contact,
+        link: 'https://example.com/bas-contention',
     },
-    
-    
 ];
 
 const OurServices = () => {
     return (
         <section className={styles.ourServices}>
             <div className={styles.titleContainer}>
-                <h2>Nos <span>Services</span></h2>
-                <h3 className={styles.subtitle}>Pharmacie à Morbecque</h3>
+                <h2>La <span>Gourmandise</span></h2>
+                <h3 className={styles.subtitle}>avant tout ...</h3>
             </div>
             <div className={styles.servicesGrid}>
                 {services.map((service, index) => (
@@ -61,7 +63,11 @@ const OurServices = () => {
                         <div className={styles.overlay}>
                             <div className={styles.text}>
                                 <h3>{service.title}</h3>
-                                <p>{service.description}</p>
+                                <p>
+                                    <a href={service.link} rel="noopener noreferrer">
+                                        {service.description} →
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -74,7 +80,11 @@ const OurServices = () => {
                         <div className={styles.overlay}>
                             <div className={styles.text}>
                                 <h3>{service.title}</h3>
-                                <p>{service.description}</p>
+                                <p>
+                                    <a href={service.link} target="_blank" rel="noopener noreferrer">
+                                        {service.description} →
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>

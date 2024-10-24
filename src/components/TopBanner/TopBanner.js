@@ -1,27 +1,25 @@
 import React from 'react';
 import styles from './topBanner.module.scss';
-// Assure-toi d'importer les logos corrects
-import facebookLogo from '../../picture/facebook-176-svgrepo-com.svg';
-import doctolibLogo from '../../picture/doctolib-svgrepo-com.svg';
-import logoMail from '../../picture/logoMail.svg'
-import logoLocation from '../../picture/logoLocation.svg'
+import facebookLogo from '../../picture/logo/logo-facebook.svg';
+import instagramLogo from '../../picture/logo/instagram-2016-5.svg';
+
 
 const TopBanner = ({ title, description, icon }) => {
     return (
         <div className={styles.topBanner}>
             <div className={styles.contactInfo}>
-                <a href="mailto:pharmaciesaintfirmin@gmail.com " className={styles.email}><img src={logoMail} alt="Mail" className={styles.mailIcon} />
-                pharmaciesaintfirmin@gmail.com 
+                <a href="#" className={styles.realisation}>
+                Nos réalisations en images 
                 </a>
-                <p className={styles.address}><img src={logoLocation} alt="Mail" className={styles.mailIcon} />11 rue Saint-Firmin 59190 Morbecque</p>
+                
             </div>
 
                 <div className={styles.socialIcons}>
-                    <a href="https://www.facebook.com/votrepharmacie" target="_blank" rel="noopener noreferrer">
-                        <img src={facebookLogo} alt="Facebook" />
+                    <a href="https://www.facebook.com/profile.php?id=100057568333547" target="_blank" rel="noopener noreferrer">
+                        <img src={facebookLogo} alt="Logo de Facebook" />
                     </a>
-                    <a href="https://www.doctolib.fr/votrepharmacie" target="_blank" rel="noopener noreferrer">
-                        <img src={doctolibLogo} alt="Doctolib" />
+                    <a href="https://www.instagram.com/la_fournee_de_pierre/" target="_blank" rel="noopener noreferrer">
+                        <img src={instagramLogo} alt="Logo d'Instagram" />
                     </a>
                 </div>
         </div>

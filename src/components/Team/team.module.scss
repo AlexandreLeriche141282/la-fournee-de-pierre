@@ -48,6 +48,9 @@
             object-fit: cover;
             display: block;
             border-radius: 5px;
+            filter: sepia(100%);
+-webkit-filter: sepia(100%);
+-moz-filter: sepia(100%);
         }
 
         .text {
