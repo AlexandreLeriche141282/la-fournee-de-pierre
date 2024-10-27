@@ -1,26 +1,29 @@
 @import '../../style/main.scss';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 
 footer.section2 {
-  
- 
+ background-color: black;
+ display: grid;
+  grid-template-columns: 33% 33% 33%;
+  // margin-top: 80px;
+  padding: 0 50px;
 
   li {
     list-style: none;
   }
 
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  margin: 80px auto;
-  width: 90%;
+  
 
   .part1 {
-    height: 600px;
+    color: white;
+    margin: auto;
     @media (max-width: 710px) {
-      height: 500px;
+      // height: 500px;
     }
 
     img {
-      width: 95%;
+      // width: 95%;
     }
 
     .logo-part {
@@ -39,9 +42,18 @@ footer.section2 {
         padding: 10px 0;
         font-weight: 700;
         letter-spacing: 3px;
+        font-size: clamp(0.5rem, 2vw + 1rem, 1rem);
       }
       p {
         letter-spacing: 2px;
+      }
+      a {
+        color: white; // Garde la couleur du texte en blanc
+        text-decoration: none; // Enlève le soulignement par défaut
+  
+        &:hover, &:focus {
+          text-decoration: underline; // Ajoute un soulignement au survol et au focus
+        }
       }
     }
   }
@@ -49,36 +61,66 @@ footer.section2 {
   .part2 {
     display: flex;
     justify-content: center;
-    height: 600px;
-
+    padding: 20px 0;
     .horaires {
-      width: 70%;
-      top: 0;
+      .realiseParContainer {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Espace entre le texte et l'image */
+        color: white;
+        font-style: italic;
+      }
+      
+      .logoImage {
+        width: auto; /* Ajustez selon vos besoins */
+        height: 30px; /* Ajustez la hauteur selon vos besoins */
+        vertical-align: middle;
+      }
+      img{
+        width: 100px;
+      }
+  
+      .title {
+        text-transform: uppercase;
+        color: $color2;
+        font-weight: 700;
+        margin-bottom: 20px;
 
-      .list-footer-right {
-        li {
-          text-align: left;
+      }
+  
+      dl {
+        dt, dd {
+          line-height: 25px;
+        }
+  
+        dt {
+          text-transform: uppercase;
+          color: $color2;
+          font-weight: 700;
+          background: rgba(220, 220, 220, 0.3);
+          padding-left: 9px;
+          &:not(:first-of-type) {
+            margin-top: 10px;
+          }
+        }
+  
+        dd {
+          margin-left: 0;
+          color: white;
         }
       }
-
+  
       .upper {
         text-transform: uppercase;
         color: $color2;
         font-weight: 700;
         background: rgba(220, 220, 220, 0.3);
       }
-
-      .li-red {
+  
+      .liRed {
         color: rgba(255, 0, 0, 0.715);
         font-weight: 800;
-        margin-bottom: 40px;
-      }
-
-      li {
-        line-height: 25px;
-        &:nth-child(2n) {
-          margin-bottom: 50px;
-        }
       }
     }
   }
@@ -88,20 +130,15 @@ footer.section2 {
     text-align: left;
     flex-direction: column;
     align-items: center;
-    height: 600px;
-
-    @media (max-width: 710px) {
-      height: 470px;
+    margin: auto;
+    color: white;
+    img{
+      width: 200px;
+      padding: 20px;
     }
 
-    
-
-    .lieu-distributeur-baguettes {
-      li {
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: rgb(166, 114, 69);
-      }
+    @media (max-width: 710px) {
+      // height: 170px;
     }
 
     p {

@@ -1,0 +1,110 @@
+@import '../../style/main.scss';
+
+.productSection {
+  padding: 40px 20px;
+  background-color: $color2;
+
+  h2 {
+    font-size: 2.5em;
+    color: $color1;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .productContent {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; // Ajout d'un espace entre le texte et l'image
+
+    @media (max-width: 800px) {
+      flex-direction: column; // Empile les éléments verticalement sur les petits écrans
+    }
+
+    .textContent {
+      flex: 1;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: auto;
+      @media (max-width: 800px) {
+        width: 100%; // Prend toute la largeur sur les petits écrans
+      }
+
+      span {
+        color: $color2;
+      }
+
+      a {
+        color: black;
+      }
+
+      p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .lieuDistributeurBaguettes {
+        ul {
+          padding: 0;
+          list-style: none;
+
+          img {
+            width: 30px;
+          }
+
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+
+            i {
+              color: rgb(17, 15, 15);
+              margin-right: 10px;
+              font-size: 1.2em;
+            }
+
+            &:hover {
+              color: rgb(120, 80, 50);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .callToAction {
+        font-weight: 900;
+      }
+    }
+
+    .imageContainer {
+      display: flex;
+
+      @media (max-width: 800px) {
+        width: 100%; // Prend toute la largeur sur les petits écrans
+        justify-content: center; // Centre l'image sur les petits écrans
+      }
+
+      .image {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Ajustements généraux pour les petits écrans
+@media (max-width: 800px) {
+  .productSection {
+    h2 {
+      font-size: 2em; // Réduire la taille du titre sur les petits écrans
+    }
+
+    padding: 20px 10px; // Réduire le padding général sur les petits écrans
+  }
+}

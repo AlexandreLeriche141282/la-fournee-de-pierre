@@ -80,8 +80,8 @@ const Team = () => {
     return (
         <section className={styles.notreEquipe}>
             <div className={styles.titleContainer}>
-                <h2>Notre <span>Equipe</span></h2>
-                <h3 className={styles.subtitle}>Avotre service !</h3>
+                <h2>Notre <span>Équipe</span></h2>
+                <h3 className={styles.subtitle}>À votre service !</h3>
             </div>
             <Slider {...settings}>
                 {equipe.map((member, index) => (

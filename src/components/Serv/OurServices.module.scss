@@ -35,7 +35,7 @@
             padding: 5px 15px;
             font-size: clamp(20px, 4vw, 38px);// Ajustez selon vos préférences
             color: $color2; // Utilisez la couleur de votre choix
-            z-index: 1; // Assurez-vous que le sous-titre est au-dessus des autres éléments
+            z-index: 1; // Assurez-vous que le sous-titre est au-dessus des autres élément
         }
     }
     .servicesGrid {
@@ -144,6 +144,7 @@
         .servicesGrid {
             flex-direction: column;
             gap: 20px;
+            padding: 0 20px;
         }
 
         .serviceCard {

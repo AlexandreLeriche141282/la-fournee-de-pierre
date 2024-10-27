@@ -4,6 +4,7 @@ import NewSection from '../../components/NewSection/NewSection'; // Import du no
 import exampleImage from '../../picture/pierre&steph.jpg'; // Exemple d'image
 import Services from '../../components/Serv/Services';
 import Team from '../../components/Team/Team';
+import Distri from '../../components/DistributeurBaguettes/Distri'
 
 const About = () => {
     return (
@@ -22,6 +23,7 @@ const About = () => {
             </NewSection>
             <Services />
             <Team />
+            <Distri />
         </div>
     );
 };

@@ -11,25 +11,25 @@
   margin-bottom: 40px;
 }
 .notreEquipe .titleContainer h2 {
-  color: #696969;
+  color: #FFC107;
   font-size: clamp(35px, 5vw, 75px);
   padding: 20px 0;
   font-weight: 200;
   margin-bottom: 0;
 }
 .notreEquipe .titleContainer h2 span {
-  color: #FFC107;
+  color: #696969;
 }
 .notreEquipe .titleContainer .subtitle {
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: 57%;
   font-weight: 200;
-  letter-spacing: 2px;
+  font-style: italic;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   padding: 5px 15px;
-  font-size: clamp(28px, 4vw, 38px);
+  font-size: clamp(10px, 4vw, 38px);
   color: black;
   z-index: 1;
 }
@@ -48,9 +48,6 @@
      object-fit: cover;
   display: block;
   border-radius: 5px;
-  filter: sepia(100%);
-  -webkit-filter: sepia(100%);
-  -moz-filter: sepia(100%);
 }
 .notreEquipe .equipeCard .text {
   padding: 15px;

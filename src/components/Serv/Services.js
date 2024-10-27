@@ -5,7 +5,7 @@ import boulangerieSaintJean from '../../picture/boulangeries/boulangerie-saint-j
 import snacking from '../../picture/snacking/sandwich.jpg';
 import patisserie from '../../picture/patisserie/patisserie.jpg';
 import chocolaterie from '../../picture/chocolat/bonbon chocolat.jpg';
-import contact from '../../picture/bas-de-contention.jpg';
+import contact from '../../picture/contactFp.jpg';
 
 const services = [
     {
@@ -43,7 +43,7 @@ const services2 = [
     },
     {
         title: 'Contact',
-        description: 'Soulagez vos jambes lourdes et prévenez l`\'`apparition de varices avec des chaussettes, collants et bas de contention à La Pharmacie St-Firmin, située à Morbecque.',
+        description: "Vous avez des questions ? Contactez-nous dès aujourd'hui !",
         image: contact,
         link: 'https://example.com/bas-contention',
     },

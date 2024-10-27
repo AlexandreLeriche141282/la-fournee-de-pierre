@@ -11,25 +11,25 @@
         margin-bottom: 40px; // Ajustez selon vos besoins
 
         h2 {
-            color: $color1;
+            color: $color2;
             font-size: clamp(35px, 5vw, 75px);
             padding: 20px 0;
             font-weight: 200;
             margin-bottom: 0; // Supprime la marge en bas du h2
             span{
-                color: $color2;
+                color: $color1;
             }
         }
 
         .subtitle {
             position: absolute;
             bottom: 10px; // Ajustez cette valeur pour positionner le h3
-            left: 50%;
+            left: 57%;
             font-weight: 200;
-            letter-spacing: 2px;
+            font-style: italic;
             transform: translateX(-50%);
             padding: 5px 15px;
-            font-size: clamp(28px, 4vw, 38px);// Ajustez selon vos préférences
+            font-size: clamp(10px, 4vw, 38px);// Ajustez selon vos préférences
             color: black; // Utilisez la couleur de votre choix
             z-index: 1; // Assurez-vous que le sous-titre est au-dessus des autres éléments
         }
@@ -48,9 +48,6 @@
             object-fit: cover;
             display: block;
             border-radius: 5px;
-            filter: sepia(100%);
--webkit-filter: sepia(100%);
--moz-filter: sepia(100%);
         }
 
         .text {
