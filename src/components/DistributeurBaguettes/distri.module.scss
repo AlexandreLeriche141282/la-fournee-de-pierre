@@ -3,6 +3,14 @@
 .productSection {
   padding: 40px 20px;
   background-color: $color2;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+  &.inView {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   h2 {
     font-size: 2.5em;
@@ -17,25 +25,38 @@
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 40px; // Ajout d'un espace entre le texte et l'image
+    gap: 40px;
 
     @media (max-width: 800px) {
-      flex-direction: column; // Empile les éléments verticalement sur les petits écrans
+      flex-direction: column;
     }
 
     .textContent {
       flex: 1;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.85);
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin: auto;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      transition-delay: 0.2s;
+
+      &.inView {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
       @media (max-width: 800px) {
-        width: 100%; // Prend toute la largeur sur les petits écrans
+        width: 100%;
       }
 
       span {
         color: $color2;
+        text-align: center;
+        transform: rotate(-2deg);
+        display: inline-block;
       }
 
       a {
@@ -84,10 +105,19 @@
 
     .imageContainer {
       display: flex;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      transition-delay: 0.4s;
+
+      &.inView {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
       @media (max-width: 800px) {
-        width: 100%; // Prend toute la largeur sur les petits écrans
-        justify-content: center; // Centre l'image sur les petits écrans
+        width: 100%;
+        justify-content: center;
       }
 
       .image {
@@ -98,13 +128,12 @@
   }
 }
 
-// Ajustements généraux pour les petits écrans
 @media (max-width: 800px) {
   .productSection {
     h2 {
-      font-size: 2em; // Réduire la taille du titre sur les petits écrans
+      font-size: 2em;
     }
 
-    padding: 20px 10px; // Réduire le padding général sur les petits écrans
+    padding: 20px 10px;
   }
 }
