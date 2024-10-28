@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './OurServices.module.scss';
 import boulangerieSaintLambert from '../../picture/boulangeries/boulangerie-saint-lambert.jpg';
 import boulangerieSaintJean from '../../picture/boulangeries/boulangerie-saint-jean-de-linières.jpg';
@@ -13,19 +12,19 @@ const services = [
         title: 'Boulangerie de Saint Jean de Linières',
         description: 'Découvrez la boulangerie',
         image: boulangerieSaintJean,
-        link: '/saintJean', // Lien interne
+        link: 'saintJean',
     },
     {
         title: 'Boulangerie de Saint Lambert la Potherie',
         description: 'Découvrez la boulangerie',
         image: boulangerieSaintLambert,
-        link: 'https://example.com/parapharmacie', // Lien externe
+        link: 'https://example.com/parapharmacie',
     },
     {
         title: 'Snacking',
         description: "Un p'tit creux, c'est par ici ! ",
         image: snacking,
-        link: 'https://example.com/orthopedie', // Lien externe
+        link: 'https://example.com/orthopedie',
     },
 ];
 
@@ -34,19 +33,19 @@ const services2 = [
         title: 'La pâtisserie',
         description: 'Laissez-vous tenter ...',
         image: patisserie,
-        link: 'https://example.com/materiel-medical', // Lien externe
+        link: 'https://example.com/materiel-medical',
     },
     {
         title: 'La chocolaterie',
         description: 'Succombez à la tentation ! ',
         image: chocolaterie,
-        link: 'https://example.com/produits-bebe', // Lien externe
+        link: 'https://example.com/produits-bebe',
     },
     {
         title: 'Contact',
         description: "Vous avez des questions ? Contactez-nous dès aujourd'hui !",
         image: contact,
-        link: '/contact', // Lien interne
+        link: 'https://example.com/bas-contention',
     },
 ];
 
@@ -65,10 +64,9 @@ const OurServices = () => {
                             <div className={styles.text}>
                                 <h3>{service.title}</h3>
                                 <p>
-                                    {service.link.startsWith('/')
-                                        ? <Link to={service.link}>{service.description} →</Link>
-                                        : <a href={service.link} target="_blank" rel="noopener noreferrer">{service.description} →</a>
-                                    }
+                                    <a href={service.link} rel="noopener noreferrer">
+                                        {service.description} →
+                                    </a>
                                 </p>
                             </div>
                         </div>
@@ -83,10 +81,9 @@ const OurServices = () => {
                             <div className={styles.text}>
                                 <h3>{service.title}</h3>
                                 <p>
-                                    {service.link.startsWith('/')
-                                        ? <Link to={service.link}>{service.description} →</Link>
-                                        : <a href={service.link} target="_blank" rel="noopener noreferrer">{service.description} →</a>
-                                    }
+                                    <a href={service.link} target="_blank" rel="noopener noreferrer">
+                                        {service.description} →
+                                    </a>
                                 </p>
                             </div>
                         </div>
