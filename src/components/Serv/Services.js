@@ -12,7 +12,7 @@ const services = [
         title: 'Boulangerie de Saint Jean de Linières',
         description: 'Découvrez la boulangerie',
         image: boulangerieSaintJean,
-        link: 'saintJean',
+        link: 'https://alexandreleriche141282.github.io/la-fournee-de-pierre/saintJean',
     },
     {
         title: 'Boulangerie de Saint Lambert la Potherie',
