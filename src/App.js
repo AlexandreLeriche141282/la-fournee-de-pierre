@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import About from './pages/About/About';
@@ -24,6 +24,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/saintJean" element={<SaintJean />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<Navigate to="/about" replace />} />
             </Routes>
             <Footer />
         </Router>
