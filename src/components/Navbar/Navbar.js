@@ -21,7 +21,7 @@ const Navbar = () => {
                 <h2>La <span>F</span>ournée de <span>P</span>ierre</h2>
             </div>
             
-            <div className="containerNav">
+            <div className={styles.containerNav}>
 
             <ul className={`${styles.menuList} ${isOpen ? styles.open : ''}`}>
                 <li>

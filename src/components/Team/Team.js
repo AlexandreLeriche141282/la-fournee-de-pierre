@@ -7,13 +7,13 @@ import equipeImage from '../../picture/julien.jpg'; // Remplacez avec vos images
 
 const equipe = [
     {
-        name: 'Jean Dupont',
-        position: 'Pharmacien titulaire',
+        name: 'Pierre',
+        position: 'Dirigeant et fondateur',
         image: equipeImage,
     },
     {
-        name: 'Marie Dubois',
-        position: 'Pharmacienne adjointe',
+        name: 'Stéphanie',
+        position: 'Dirigeante et fondatrice',
         image: equipeImage,
     },
     {
@@ -55,10 +55,12 @@ const Team = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4, // Nombre d'images visibles
+        slidesToShow: 4,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
+        autoplay: true,  // Ajout de l'autoplay
+        autoplaySpeed: 3000,  // Vitesse de défilement en millisecondes (ici 3 secondes)
         responsive: [
             {
                 breakpoint: 1024,

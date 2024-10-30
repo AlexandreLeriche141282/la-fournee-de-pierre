@@ -58,6 +58,10 @@ nav .containerLogo h2 span {
 nav .containerLogo img {
   width: 130px;
 }
+nav .containerNav {
+  max-width: 1200px;
+  margin: 10px auto;
+}
 nav .burgerButton {
   display: none;
   background: none;

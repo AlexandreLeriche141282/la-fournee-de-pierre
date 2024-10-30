@@ -9,7 +9,7 @@ const TopBanner = ({ title, description, icon }) => {
         <div className={styles.topBanner}>
             <div className={styles.contactInfo}>
                 <a href="#" className={styles.realisation}>
-                Nos réalisations en images 
+                Distributeurs à baguettes 24h/24 7j/7
                 </a>
                 
             </div>

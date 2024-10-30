@@ -5,6 +5,7 @@ import exampleImage from '../../picture/pierre&steph.jpg'; // Exemple d'image
 import Services from '../../components/Serv/Services';
 import Team from '../../components/Team/Team';
 import Distri from '../../components/DistributeurBaguettes/Distri'
+import ParallaxBackground from '../../components/Parallax-scrolling/ParallaxBackground';
 
 const About = () => {
     return (
@@ -23,6 +24,7 @@ const About = () => {
             </NewSection>
             <Services />
             <Team />
+            <ParallaxBackground />
             <Distri />
         </div>
     );
