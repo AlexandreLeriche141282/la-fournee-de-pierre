@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './OurServices.module.scss';
 import boulangerieSaintLambert from '../../picture/boulangeries/boulangerie-saint-lambert.jpg';
@@ -51,6 +51,64 @@ const services2 = [
 ];
 
 const OurServices = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+    const observerRef = useRef(null);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 767);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        if (isMobile) {
+            observerRef.current = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add(styles['in-view']);
+                        } else {
+                            entry.target.classList.remove(styles['in-view']);
+                        }
+                    });
+                },
+                { threshold: 0.7 }
+            );
+
+            const cards = document.querySelectorAll(`.${styles.serviceCard}`);
+            cards.forEach((card) => observerRef.current.observe(card));
+        }
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+            }
+        };
+    }, [isMobile]);
+
+    const renderServiceCard = (service, index) => (
+        <div key={index} className={`${styles.serviceCard} ${isMobile ? styles.mobileCard : ''}`}>
+            <img src={service.image} alt={service.title} />
+            <div className={styles.overlay}>
+                <div className={styles.text}>
+                    <h3>{service.title}</h3>
+                    <p>
+                        {service.link.startsWith('http') ? (
+                            <a href={service.link} target="_blank" rel="noopener noreferrer">
+                                {service.description} →
+                            </a>
+                        ) : (
+                            <Link to={service.link}>
+                                {service.description} →
+                            </Link>
+                        )}
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
+
     return (
         <section className={styles.ourServices}>
             <div className={styles.titleContainer}>
@@ -58,50 +116,10 @@ const OurServices = () => {
                 <h3 className={styles.subtitle}>avant tout ...</h3>
             </div>
             <div className={styles.servicesGrid}>
-                {services.map((service, index) => (
-                    <div key={index} className={styles.serviceCard}>
-                        <img src={service.image} alt={service.title} />
-                        <div className={styles.overlay}>
-                            <div className={styles.text}>
-                                <h3>{service.title}</h3>
-                                <p>
-                                    {service.link.startsWith('http') ? (
-                                        <a href={service.link} target="_blank" rel="noopener noreferrer">
-                                            {service.description} →
-                                        </a>
-                                    ) : (
-                                        <Link to={service.link}>
-                                            {service.description} →
-                                        </Link>
-                                    )}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                {services.map(renderServiceCard)}
             </div>
             <div className={styles.servicesGrid}>
-                {services2.map((service, index) => (
-                    <div key={index} className={styles.serviceCard}>
-                        <img src={service.image} alt={service.title} />
-                        <div className={styles.overlay}>
-                            <div className={styles.text}>
-                                <h3>{service.title}</h3>
-                                <p>
-                                    {service.link.startsWith('http') ? (
-                                        <a href={service.link} target="_blank" rel="noopener noreferrer">
-                                            {service.description} →
-                                        </a>
-                                    ) : (
-                                        <Link to={service.link}>
-                                            {service.description} →
-                                        </Link>
-                                    )}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                {services2.map(renderServiceCard)}
             </div>
         </section>
     );
