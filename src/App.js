@@ -11,10 +11,12 @@ import './components/TopBanner/topBanner.module.scss';
 import TopBanner from './components/TopBanner/TopBanner';
 import Loader from './components/Loader/Loader';
 import SaintJean from './pages/SaintJean/SaintJean';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     return (
         <Router basename="/la-fournee-de-pierre">
+            <ScrollToTop />
             <Loader />
             <TopBanner />
             <Navbar />

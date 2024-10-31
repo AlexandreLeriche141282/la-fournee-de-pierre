@@ -93,29 +93,56 @@ nav {
 
   /* Media query pour les écrans inférieurs à 1000px */
   @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
+    .burgerButton {
+      display: block;
+      position: fixed;
+      top: 50px;
+      right: 20px;
+      z-index: 1001;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
 
     .menuList {
-      display: none; /* Cacher le menu classique par défaut */
-      flex-direction: column;
+      position: fixed;
+      top: -20px;
+      left: 0;
       width: 100%;
-      padding: 0;
-      margin: 0;
+      height: 0; // Commence avec une hauteur de 0
+      overflow: hidden; // Cache le contenu qui dépasse
+      background-color: rgba(255, 255, 255, 0.95);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: height 0.3s ease; // Transition sur la hauteur
+      z-index: 1000;
+
       li {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        margin: 10px 0;
         text-align: center;
+
+        a {
+          font-size: 18px;
+          padding: 10px 15px;
+        }
       }
     }
 
     .menuList.open {
-      display: flex; /* Afficher le menu burger lorsqu'il est ouvert */
-    }
+      height: 100vh; // S'étend sur toute la hauteur de l'écran
 
-    .burgerButton {
-      display: block; /* Afficher le bouton du menu burger */
-    }
-
-    .callButton {
-      justify-self: center;
+      li {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.1s; // Délai pour que l'animation commence après l'ouverture du menu
+      }
     }
   }
 }
+

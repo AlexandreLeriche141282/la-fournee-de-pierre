@@ -1,40 +1,62 @@
 .logoSlider {
-    width: 200%;
-    overflow: hidden;
-    background: #f0f0f063; // Ajoutez une couleur de fond si nécessaire
-    padding: 20px 0;
+  width: 100%; // Changez à 100% pour occuper toute la largeur du conteneur parent
+  overflow: hidden;
+  background: #f0f0f063;
+  padding: 20px 0;
+  position: relative; // Ajoutez ceci pour le positionnement des enfants
+}
+
+.logoTrack {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content; // Utilisez max-content au lieu de fit-content
+
+  &:hover {
+    animation-play-state: paused;
   }
-  
-  .logoTrack {
-    display: flex;
-    animation: scroll 30s linear infinite;
-    width: fit-content; // S'ajuste au contenu
-  
-    &:hover {
-      animation-play-state: paused;
-    }
+}
+
+.logoItem {
+  flex: 0 0 auto;
+  margin: 0 20px;
+  text-align: center;
+
+  img {
+    width: 200px;
+    height: auto;
   }
-  
-  .logoItem {
-    flex: 0 0 auto;
-    margin: 0 20px;
-    text-align: center;
-  
-    img {
-      width: 200px; // Ajustez selon vos besoins
-      height: auto;
-    }
-  
-    p {
-      margin-top: 10px;
-    }
+
+  p {
+    margin-top: 10px;
   }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(calc(-50% - 20px)); // Ajustez pour tenir compte des marges
+  }
+}
+
+// Ajoutez ces styles pour créer un effet de fondu sur les bords
+.logoSlider::before,
+.logoSlider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logoSlider::before {
+  left: 0;
+  background: linear-gradient(to right, #f0f0f063 0%, rgba(240, 240, 240, 0) 100%);
+}
+
+.logoSlider::after {
+  right: 0;
+  background: linear-gradient(to left, #f0f0f063 0%, rgba(240, 240, 240, 0) 100%);
+}
