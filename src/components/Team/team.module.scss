@@ -23,14 +23,14 @@
 
         .subtitle {
             position: absolute;
-            bottom: 10px; // Ajustez cette valeur pour positionner le h3
-            left: 57%;
+            bottom: 5px; // Ajustez cette valeur pour positionner le h3
+            left: 60%;
             font-weight: 200;
             font-style: italic;
             transform: translateX(-50%);
             padding: 5px 15px;
             font-size: clamp(10px, 4vw, 38px);// Ajustez selon vos préférences
-            color: black; // Utilisez la couleur de votre choix
+            color: $color2;
             z-index: 1; // Assurez-vous que le sous-titre est au-dessus des autres éléments
         }
     }

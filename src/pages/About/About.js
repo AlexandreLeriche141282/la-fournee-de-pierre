@@ -17,9 +17,9 @@ const About = () => {
                 </div>
             </div>
             <NewSection 
-            title="À Propos de nous ..."
+            
             image={exampleImage}
-        >
+        >   <h2>À Propos de <span>nous ...</span></h2>
             Quand il s'est installé, en 2007, comme boulanger dans la commune - là où il est né - Pierre Mourgues était surtout connu pour ses pâtisseries. <br /><strong>« Il y a dix ans, avec mon épouse Stéphanie, nous avions l'idée d'ouvrir un salon de thé mais il s'est avéré que le fond de la boulangerie était à vendre, confie-t-il. Ici, dans le village, les habitants me connaissaient comme chef pâtissier. Alors, avec Stéphanie, nous avons tout mis en oeuvre pour leur prouver que j'étais aussi un bon boulanger. »</strong> <br /><br />Cela a tellement bien marché que, depuis, La Fournée de Pierre a une petite soeur de boutique, née en 2013, à Saint-Lambert-la-Potherie. <strong>« Nous nous attachons à réaliser nos produits sur place dans le respect des traditions, explique modestement Pierre Mourgues. Pour obtenir une mie bien alvéolée, il est important que la pâte fermente lentement pour permettre aux arômes de se développer harmonieusement... »</strong>
             </NewSection>
             <Services />

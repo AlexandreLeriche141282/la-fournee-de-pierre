@@ -38,7 +38,7 @@ nav {
   
       span {
         font-family: 'dragon', sans-serif;
-        color: rgb(255, 243, 0);
+        color: $color2;
       }
       @media (max-width:400px) {
         letter-spacing: normal;

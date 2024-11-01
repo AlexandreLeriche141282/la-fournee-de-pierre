@@ -31,10 +31,14 @@
 
     h2 {
         margin-top: 0;
+        margin-bottom: 20px;
         color: $color2;
         letter-spacing: 5px;
         font-weight: 100;
         font-size: clamp(1.5rem, 5vw + 1rem, 3rem);
+        span{
+            font-style: italic;
+        }
     }
 
     p {
@@ -69,6 +73,9 @@
             p{
                 text-align: left;
             }
+           span{
+            display: block;
+           }
         }
 
         .image {

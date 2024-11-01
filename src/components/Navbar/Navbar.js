@@ -21,7 +21,7 @@ const Navbar = () => {
     const menuItems = [
         { name: 'Accueil', path: '/about' },
         { name: 'Saint Jean de Linières', path: '/saintJean' },
-        { name: 'Saint Lambert la Potherie', path: '/para' },
+        { name: 'Saint Lambert la Potherie', path: '/saintLambert' },
         { name: 'Snacking', path: '/ortho' },
         { name: 'Pâtisseries', path: '/materials' },
         { name: 'Chocolats', path: '/actuality' },

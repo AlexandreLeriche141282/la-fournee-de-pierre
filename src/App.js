@@ -11,6 +11,7 @@ import './components/TopBanner/topBanner.module.scss';
 import TopBanner from './components/TopBanner/TopBanner';
 import Loader from './components/Loader/Loader';
 import SaintJean from './pages/SaintJean/SaintJean';
+import SaintLamb from './pages/SaintLamb/SaintLamb';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/" element={<Navigate to="/about" />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/saintJean" element={<SaintJean />} />
+                <Route path="/saintLambert" element={<SaintLamb />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<Navigate to="/about" replace />} />
             </Routes>

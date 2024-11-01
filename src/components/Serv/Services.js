@@ -10,13 +10,13 @@ import contact from '../../picture/contactFp.jpg';
 
 const services = [
     {
-        title: 'Boulangerie de Saint Jean de Linières',
+        title: 'Boulangerie de St Jean de Linières',
         description: 'Découvrez la boulangerie',
         image: boulangerieSaintJean,
         link: '/saintJean',
     },
     {
-        title: 'Boulangerie de Saint Lambert la Potherie',
+        title: 'Boulangerie de St Lambert la Potherie',
         description: 'Découvrez la boulangerie',
         image: boulangerieSaintLambert,
         link: '/saintLambert',
@@ -72,7 +72,7 @@ const OurServices = () => {
                         }
                     });
                 },
-                { threshold: 0.7 }
+                { threshold: 1 }
             );
 
             const cards = document.querySelectorAll(`.${styles.serviceCard}`);

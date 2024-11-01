@@ -33,7 +33,7 @@ const Footer = () => {
     <p>
       <a href="https://www.google.fr/maps/dir//15+Pl.+des+Plantagenets,+49070+Saint-L%C3%A9ger-de-Lini%C3%A8res/@47.4590892,-0.7415872,23746m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x48088008e391cd51:0xbf8135a152ae27ec!2m2!1d-0.6592048!2d47.4591125?hl=fr&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
         15 Place des Plantagenets<br />
-        49070 Saint-Jean-des-Linières
+        49070 Saint-Jean-de-Linières
       </a>
     </p>
     <p>

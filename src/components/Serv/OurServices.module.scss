@@ -96,7 +96,7 @@
 
             h3 {
                 font-size: 40px;
-                font-weight: bold;
+                font-weight: 100;
                 margin-bottom: 10px;
                 opacity: 0;
                 transform: translateY(20px);
@@ -126,6 +126,7 @@
 
 @media screen and (max-width: 767px) {
     .ourServices {
+        padding: 0;
         .servicesGrid {
             flex-direction: column;
             gap: 20px;
