@@ -1,0 +1,13 @@
+@import '../../style/main.scss';
+
+h3{
+    text-align: center;
+    color: $color1;
+    letter-spacing: 5px;
+        font-weight: 100;
+        font-size: clamp(1.5rem, 5vw + 1rem, 3rem);
+        margin-bottom: 30px;
+        span{
+            color: $color2;
+        }
+}
