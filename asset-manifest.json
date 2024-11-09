@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/la-fournee-de-pierre/static/css/main.a8641e84.css",
+    "main.css": "/la-fournee-de-pierre/static/css/main.6bd3b58b.css",
     "main.js": "/la-fournee-de-pierre/static/js/main.bac94772.js",
     "static/js/453.9d767731.chunk.js": "/la-fournee-de-pierre/static/js/453.9d767731.chunk.js",
     "static/media/painsFour.jpg": "/la-fournee-de-pierre/static/media/painsFour.4986bb37d4fd532f1513.jpg",
@@ -36,12 +36,12 @@
     "static/media/slick.woff": "/la-fournee-de-pierre/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/la-fournee-de-pierre/index.html",
     "static/media/logo-facebook.svg": "/la-fournee-de-pierre/static/media/logo-facebook.041622a72cb3bdf04591939900a38e06.svg",
-    "main.a8641e84.css.map": "/la-fournee-de-pierre/static/css/main.a8641e84.css.map",
+    "main.6bd3b58b.css.map": "/la-fournee-de-pierre/static/css/main.6bd3b58b.css.map",
     "main.bac94772.js.map": "/la-fournee-de-pierre/static/js/main.bac94772.js.map",
     "453.9d767731.chunk.js.map": "/la-fournee-de-pierre/static/js/453.9d767731.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8641e84.css",
+    "static/css/main.6bd3b58b.css",
     "static/js/main.bac94772.js"
   ]
 }
