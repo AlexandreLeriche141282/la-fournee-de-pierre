@@ -1,0 +1,80 @@
+@import '../../style/main.scss';
+
+.trustmary-widget-container {
+    // Styles généraux pour le conteneur du widget
+    max-width: 0%;
+    margin: 2rem auto;
+    padding: 1rem;
+    
+    // Assurez-vous que le widget s'adapte bien à différentes tailles d'écran
+    @media (min-width: 768px) {
+      max-width: 80%;
+    }
+  
+    // Styles pour le titre du widget (si applicable)
+    .trustmary-widget-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  
+    // Styles pour les avis individuels
+    .trustmary-review-item {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+      // Nom de l'auteur de l'avis
+      .trustmary-review-author {
+        font-weight: 600;
+        color: #4a4a4a;
+      }
+  
+      // Texte de l'avis
+      .trustmary-review-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #666;
+      }
+  
+      // Étoiles de notation
+      .trustmary-review-stars {
+        color: #ffd700;
+      }
+    }
+  
+    // Styles pour les boutons de navigation (si applicable)
+    .trustmary-navigation-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: darken(#007bff, 10%);
+      }
+    }
+}
+
+// Styles globaux pour s'assurer que le widget Trustmary s'intègre bien
+:global {
+  #trustmary-widget {
+    font-family: 'Montserrat', sans-serif;
+    
+    // Assurez-vous que le contenu du widget ne dépasse pas son conteneur
+    iframe {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    
+    // Ajoutez d'autres styles globaux si nécessaire pour remplacer les styles par défaut de Trustmary
+  }
+}
