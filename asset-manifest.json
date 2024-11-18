@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/la-fournee-de-pierre/static/css/main.6bd3b58b.css",
-    "main.js": "/la-fournee-de-pierre/static/js/main.bac94772.js",
+    "main.css": "/la-fournee-de-pierre/static/css/main.a3660879.css",
+    "main.js": "/la-fournee-de-pierre/static/js/main.228584c6.js",
     "static/js/453.9d767731.chunk.js": "/la-fournee-de-pierre/static/js/453.9d767731.chunk.js",
     "static/media/painsFour.jpg": "/la-fournee-de-pierre/static/media/painsFour.4986bb37d4fd532f1513.jpg",
     "static/media/fa-solid-900.ttf": "/la-fournee-de-pierre/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/Birthstone-Regular.ttf": "/la-fournee-de-pierre/static/media/Birthstone-Regular.07198561218abc06ed95.ttf",
     "static/media/boulangerie-saint-jean-de-linières.jpg": "/la-fournee-de-pierre/static/media/boulangerie-saint-jean-de-linières.63a1af220959023891fe.jpg",
     "static/media/bonbon chocolat.jpg": "/la-fournee-de-pierre/static/media/bonbon chocolat.00e78e4f02e1925023aa.jpg",
     "static/media/fa-brands-400.ttf": "/la-fournee-de-pierre/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
@@ -36,12 +37,12 @@
     "static/media/slick.woff": "/la-fournee-de-pierre/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/la-fournee-de-pierre/index.html",
     "static/media/logo-facebook.svg": "/la-fournee-de-pierre/static/media/logo-facebook.041622a72cb3bdf04591939900a38e06.svg",
-    "main.6bd3b58b.css.map": "/la-fournee-de-pierre/static/css/main.6bd3b58b.css.map",
-    "main.bac94772.js.map": "/la-fournee-de-pierre/static/js/main.bac94772.js.map",
+    "main.a3660879.css.map": "/la-fournee-de-pierre/static/css/main.a3660879.css.map",
+    "main.228584c6.js.map": "/la-fournee-de-pierre/static/js/main.228584c6.js.map",
     "453.9d767731.chunk.js.map": "/la-fournee-de-pierre/static/js/453.9d767731.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6bd3b58b.css",
-    "static/js/main.bac94772.js"
+    "static/css/main.a3660879.css",
+    "static/js/main.228584c6.js"
   ]
 }
