@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/la-fournee-de-pierre/static/css/main.a3660879.css",
-    "main.js": "/la-fournee-de-pierre/static/js/main.228584c6.js",
+    "main.css": "/la-fournee-de-pierre/static/css/main.06c42ac8.css",
+    "main.js": "/la-fournee-de-pierre/static/js/main.d1a27382.js",
     "static/js/453.9d767731.chunk.js": "/la-fournee-de-pierre/static/js/453.9d767731.chunk.js",
     "static/media/painsFour.jpg": "/la-fournee-de-pierre/static/media/painsFour.4986bb37d4fd532f1513.jpg",
     "static/media/fa-solid-900.ttf": "/la-fournee-de-pierre/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
@@ -27,7 +27,7 @@
     "static/media/fa-regular-400.woff2": "/la-fournee-de-pierre/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
     "static/media/logo-chocolat.png": "/la-fournee-de-pierre/static/media/logo-chocolat.a81a37766fa921988d02.png",
     "static/media/logo-gateau.png": "/la-fournee-de-pierre/static/media/logo-gateau.e98b9cad980564912c39.png",
-    "static/media/cropped.svg": "/la-fournee-de-pierre/static/media/cropped.e5acca1a54a0b19974929ecd21348d89.svg",
+    "static/media/cropped.svg": "/la-fournee-de-pierre/static/media/cropped.0c69d6d024d9d2d2bf7eb0ac7f42bd3c.svg",
     "static/media/fa-v4compatibility.ttf": "/la-fournee-de-pierre/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/la-fournee-de-pierre/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "static/media/instagram-2016-5.svg": "/la-fournee-de-pierre/static/media/instagram-2016-5.d94e021fa430206cd590a0b48aa10712.svg",
@@ -37,12 +37,12 @@
     "static/media/slick.woff": "/la-fournee-de-pierre/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/la-fournee-de-pierre/index.html",
     "static/media/logo-facebook.svg": "/la-fournee-de-pierre/static/media/logo-facebook.041622a72cb3bdf04591939900a38e06.svg",
-    "main.a3660879.css.map": "/la-fournee-de-pierre/static/css/main.a3660879.css.map",
-    "main.228584c6.js.map": "/la-fournee-de-pierre/static/js/main.228584c6.js.map",
+    "main.06c42ac8.css.map": "/la-fournee-de-pierre/static/css/main.06c42ac8.css.map",
+    "main.d1a27382.js.map": "/la-fournee-de-pierre/static/js/main.d1a27382.js.map",
     "453.9d767731.chunk.js.map": "/la-fournee-de-pierre/static/js/453.9d767731.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3660879.css",
-    "static/js/main.228584c6.js"
+    "static/css/main.06c42ac8.css",
+    "static/js/main.d1a27382.js"
   ]
 }
